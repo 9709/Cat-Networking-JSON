@@ -12,6 +12,12 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface Photo : NSObject
 
+@property (nonatomic, strong) NSURL *url;
+@property (nonatomic, strong) NSString *title;
+
+- (instancetype)initWithPhotoDict: (NSDictionary *)photoDict;
+
+// https://farm{farm-id}.staticflickr.com/{server-id}/{id}_{secret}.jpg
 @end
 
 NS_ASSUME_NONNULL_END
